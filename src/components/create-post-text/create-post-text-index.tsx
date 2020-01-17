@@ -33,7 +33,7 @@ class CreatePostTextIndex extends React.Component<{}, IState>{
 	}
 	render() {
 		return (
-			<CreatePostTextPage></CreatePostTextPage>
+			<CreatePostTextPage  handleSubmit={this.handleSubmit}></CreatePostTextPage>
 		);
 	};
 }
