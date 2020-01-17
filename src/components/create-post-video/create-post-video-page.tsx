@@ -16,18 +16,18 @@ function CreatePostVideoPage(props: any) {
 				<Card.Text>
 					Add a URL from youtube, vimeo and more.
     			</Card.Text>
-				<Form onSubmit={this.handleSubmit}>
+				<Form onSubmit={handleSubmit}>
 					<Form.Group controlId="frmUrl">						
 						<InputGroup.Prepend>
 							<InputGroup.Text id="inputGroupPrepend"></InputGroup.Text>
 						</InputGroup.Prepend>
-						<Form.Control type="url" name="url" onChange={this.handleChange} placeholder="Enter url" />
+						<Form.Control type="url" name="url" onChange={handleChange} placeholder="Enter url" />
 					</Form.Group>
 					<Form.Group controlId="frmTitle">																	
-						<Form.Control type="text" name="title" onChange={this.handleChange} placeholder="Enter Post title" />
+						<Form.Control type="text" name="title" onChange={handleChange} placeholder="Enter Post title" />
 					</Form.Group>
 					<Form.Group controlId="frmDescription">												
-						<Form.Control type="text" name="description" onChange={this.handleChange} placeholder="Enter Post description" />
+						<Form.Control type="text" name="description" onChange={handleChange} placeholder="Enter Post description" />
 					</Form.Group>
 					<Button variant="primary" type="submit">
 						Publish
