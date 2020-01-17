@@ -2,19 +2,22 @@ import React, { Fragment } from 'react';
 import CreatePage from './create-page';
 import CreatePostTextIndex from '../create-post-text/create-post-text-index';
 import CreatePostVideoIndex from '../create-post-video/create-post-video-index';
-
-class CreateIndex extends React.Component {
+interface IState {
+	value:String;
+}
+class CreateIndex extends React.Component<{}, IState>{
 	constructor(props: any) {
 		super(props);
 
 		this.state = this.state = {
-			value: ""
+			value: "text"
 		}
 		this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange(event: any) {
-		this.setState({ value: event.target.value })
+		this.setState({ value: event.target.value });
+		console.log(this.state.value);
 	}
 
 	render() {
@@ -22,7 +25,7 @@ class CreateIndex extends React.Component {
 			<Fragment>
 				<CreatePage handleChange={this.handleChange}></CreatePage>
 				{
-					this.state == "text" ?
+					this.state.value === "text" ?
 						(<CreatePostTextIndex></CreatePostTextIndex>)
 						:
 						(<CreatePostVideoIndex></CreatePostVideoIndex>)

@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux';
-// import textReducer from './reducers/textReducer';
+import getPostsReducer from './reducers/getPostsReducer';
 
 const reducer = combineReducers({
-
+    getPostsReducer,
 });
 
 const store = createStore( reducer );

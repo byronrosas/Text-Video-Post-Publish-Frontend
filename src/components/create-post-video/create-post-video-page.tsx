@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 function CreatePostVideoPage(props: any) {
 	const {
@@ -9,7 +8,7 @@ function CreatePostVideoPage(props: any) {
 		handleChange
 	} = props;
 	return (
-		<Card style={{ width: '18rem' }}>
+		<Card style={{ width: '20rem' }}>
 			<Card.Body>
 				<Card.Title>Video</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Create and Publish</Card.Subtitle>
@@ -17,10 +16,7 @@ function CreatePostVideoPage(props: any) {
 					Add a URL from youtube, vimeo and more.
     			</Card.Text>
 				<Form onSubmit={handleSubmit}>
-					<Form.Group controlId="frmUrl">						
-						<InputGroup.Prepend>
-							<InputGroup.Text id="inputGroupPrepend"></InputGroup.Text>
-						</InputGroup.Prepend>
+					<Form.Group controlId="frmUrl">												
 						<Form.Control type="url" name="url" onChange={handleChange} placeholder="Enter url" />
 					</Form.Group>
 					<Form.Group controlId="frmTitle">																	

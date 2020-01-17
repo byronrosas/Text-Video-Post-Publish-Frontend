@@ -1,39 +1,39 @@
 import React from 'react';
 import CreatePostTextPage from './create-post-text-page';
-import { Textobj } from '../../models/textobj';
+
 interface IState {
-	objtext:Textobj;
+	title?:string;
+	description?:string;
 }
 class CreatePostTextIndex extends React.Component<{}, IState>{
-	defaultText: Textobj;
-	constructor(props) {
-		super(props);
-		this.defaultText = {
-			title: "",
-			description: ""
-		}
+	
+	constructor(props:any) {
+		super(props);					
 		this.state = {
-			objtext: this.defaultText
+			title:"",
+			description:""
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
+		this.handleChange = this.handleChange.bind(this);		
 	}
 
-	handleChange(event) {
-		const nameInput = event.target.name;
-		this.defaultText[nameInput] = event.targe.value;
-		this.setState({ objtext: this.defaultText });
+	handleChange(event:any) {
+		const target = event.target;
+		let  nameInput = target.name;		
+		this.setState({
+			[nameInput]:target.value
+		});				
 	}
 
-	handleSubmit(event) {
+	handleSubmit(event:any) {
 		event.preventDefault();
 		// fetch to API 
-		console.log(this.state.objtext);
+		console.log(this.state);
 	}
 	render() {
 		return (
-			<CreatePostTextPage  handleSubmit={this.handleSubmit}></CreatePostTextPage>
+			<CreatePostTextPage  handleSubmit={this.handleSubmit} handleChange={this.handleChange}></CreatePostTextPage>
 		);
 	};
 }
