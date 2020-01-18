@@ -19,8 +19,7 @@ class PostItemDetailIndex extends React.Component<IProps, {}> {
 				let from = v_pos + 1; //omit "="
 				let to = amp_pos !== -1 ? amp_pos : url.length;
 				let id_video = url.slice(from, to);
-				newURL = base + id_video;
-				console.log(newURL);
+				newURL = base + id_video;				
 				return newURL;
 
 			}
@@ -29,11 +28,8 @@ class PostItemDetailIndex extends React.Component<IProps, {}> {
 				const base = "https://player.vimeo.com/video/";
 				let vimeo_pos = url.indexOf("vimeo");
 				let from = url.indexOf("/", vimeo_pos)+1; //index last "/", +1 omit "/"							
-				let id_video = url.slice(from);
-				console.log(from);
-				console.log(id_video);
-				newURL = base + id_video;
-				console.log(newURL);
+				let id_video = url.slice(from);			
+				newURL = base + id_video;				
 				return newURL;
 			}
 		} else {

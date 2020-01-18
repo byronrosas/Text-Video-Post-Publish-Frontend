@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Card from 'react-bootstrap/Card';
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
 import RoutedLinkContainer from '../RoutedLinkContainer';
 
 function PostItemPage(props: any) {

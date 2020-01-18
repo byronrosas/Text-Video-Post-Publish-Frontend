@@ -16,8 +16,7 @@ class CreateIndex extends React.Component<{}, IState>{
 	}
 
 	handleChange(event: any) {
-		this.setState({ value: event.target.value });
-		console.log(this.state.value);
+		this.setState({ value: event.target.value });		
 	}
 
 	render() {

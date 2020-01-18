@@ -2,6 +2,10 @@
   "name": "text-video-publish-app",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byronrosas/Text-Video-Post-Publish-Frontend.git"
+  },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
     "@types/react-dom": "^16.9.4",
