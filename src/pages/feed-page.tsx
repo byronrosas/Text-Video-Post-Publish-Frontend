@@ -1,9 +1,10 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
+import ListIndex from '../components/list/list-index';
 
 const FeedPage: React.FC = () => {
   return (
     <Fragment>
-      Hola desde feeed :D 
+      <ListIndex></ListIndex>
     </Fragment>
   );
 };

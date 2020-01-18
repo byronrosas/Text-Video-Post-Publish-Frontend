@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 function RoutedLinkContainer(props:any) {
   return (
     <LinkContainer to={props.link}>      
-      <NavItem><Button style={{ marginRight: '12px' }} variant="outline-light">{props.displayText}</Button></NavItem>
+      <NavItem><Button style={{ marginRight: '12px' }} variant={props.variant}>{props.displayText}</Button></NavItem>
     </LinkContainer>
   );
 }

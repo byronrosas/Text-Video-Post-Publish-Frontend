@@ -2,20 +2,32 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useMutation } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
+
+const POST_PUBLISH_ADD = gql`
+	mutation PostAdd($post:PostInputs!){
+		postAdd(post:$post){
+			count		
+		}
+	}
+`;
+
 function CreatePostVideoPage(props: any) {
 	const {
 		handleSubmit,
 		handleChange
 	} = props;
+	const [addTodo] = useMutation(POST_PUBLISH_ADD);
 	return (
-		<Card style={{ width: '20rem' }}>
+		<Card style={{ width: '60rem' }}>
 			<Card.Body>
 				<Card.Title>Video</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Create and Publish</Card.Subtitle>
 				<Card.Text>
 					Add a URL from youtube, vimeo and more.
     			</Card.Text>
-				<Form onSubmit={handleSubmit}>
+				<Form onSubmit={(e:any)=> { handleSubmit(addTodo,e)}}>
 					<Form.Group controlId="frmUrl">												
 						<Form.Control type="url" name="url" onChange={handleChange} placeholder="Enter url" />
 					</Form.Group>

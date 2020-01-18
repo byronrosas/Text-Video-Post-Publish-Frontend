@@ -5,7 +5,10 @@ const AdminPage: React.FC = (props) => {
 
   return (    
     <Fragment>
-      <CreateIndex></CreateIndex>
+      <h1>Create &amp; Publish</h1>
+      <div className="center">
+        <CreateIndex></CreateIndex>
+      </div>      
     </Fragment>
   );
 };
