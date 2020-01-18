@@ -5,7 +5,8 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
 function PostItemDetailPage(props: any) {
 	const {
 		postItem,
-		typeItem
+		typeItem,
+		formatVideo		
 	} = props;
 	return (
 		<Fragment>
@@ -16,7 +17,7 @@ function PostItemDetailPage(props: any) {
 					{
 					typeItem !== "text" ?
 					(<ResponsiveEmbed aspectRatio="16by9">
-						<iframe width="560" height="315" src={postItem.url} title="video"></iframe>
+						<iframe width="560" height="315" src={formatVideo(postItem.url)} title="video"></iframe>
 					</ResponsiveEmbed>):(<div></div>)
 					}
 					<Card.Text>

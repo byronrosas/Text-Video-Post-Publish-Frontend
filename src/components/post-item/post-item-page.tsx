@@ -7,6 +7,7 @@ function PostItemPage(props: any) {
 	const {
 		postItem,
 		typeItem,
+		formatVideo
 	} = props;
 
 	return (
@@ -17,15 +18,18 @@ function PostItemPage(props: any) {
 					<Card.Title>Title: {postItem.title}</Card.Title>
 					{
 						typeItem !== "text" ?
-							(<ResponsiveEmbed aspectRatio="16by9">
-								<iframe width="560" height="315" src={postItem.url} title="video"></iframe>
-							</ResponsiveEmbed>) : (<div></div>)
+							(
+								<div className="center">
+									<iframe width="560" height="315" src={formatVideo(postItem.url)} title="video"></iframe>
+								</div>
+								
+							) : (<div></div>)
 					}
 					<Card.Text className="content-trunk">
 						Description:
 						{postItem.description}
 					</Card.Text>
-					<RoutedLinkContainer link={'/fullread/'+postItem._id} displayText={'More'} variant={'info'}></RoutedLinkContainer>
+					<RoutedLinkContainer link={'/fullread/' + postItem._id} displayText={'More'} variant={'info'}></RoutedLinkContainer>
 				</Card.Body>
 			</Card>
 		</Fragment>

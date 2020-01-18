@@ -40,13 +40,11 @@ class CreatePostTextIndex extends React.Component<IProps, IState>{
 		try {
 			const data = await addPost({
 				variables: { post: { title: this.state.title, description: this.state.description } }
-			});
-			console.log(data.data.postAdd.count);
+			});			
 			this.setState({ isok: true });
 			this.props.addPost(data.data.postAdd.count);
 		} catch (error) {
-			this.setState({ isok: false });
-			console.log(error);
+			this.setState({ isok: false });			
 		}
 
 

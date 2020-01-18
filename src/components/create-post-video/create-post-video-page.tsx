@@ -25,7 +25,7 @@ function CreatePostVideoPage(props: any) {
 				<Card.Title>Video</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Create and Publish</Card.Subtitle>
 				<Card.Text>
-					Add a URL from youtube, vimeo and more.
+					Add a URL only from <strong>youtube</strong> &amp; <strong>vimeo</strong>.
     			</Card.Text>
 				<Form onSubmit={(e:any)=> { handleSubmit(addTodo,e)}}>
 					<Form.Group controlId="frmUrl">												
