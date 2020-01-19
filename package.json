@@ -2,6 +2,10 @@
   "name": "text-video-publish-app",
   "version": "0.1.0",
   "private": true,
+  "engines":{
+    "node":"12.14.0",
+    "npm":"6.13.6"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byronrosas/Text-Video-Post-Publish-Frontend.git"
