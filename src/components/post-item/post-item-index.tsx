@@ -17,7 +17,7 @@ class PostItemIndex extends React.Component<IProps, {}> {
 				const base = "https://www.youtube.com/embed/";
 				let v_pos = url.indexOf("v"); //index id v=######
 				let amp_pos = url.indexOf("&");
-				let from = v_pos + 1; //omit "="
+				let from = v_pos + 2; //omit "="
 				let to = amp_pos !== -1 ? amp_pos : url.length;
 				let id_video = url.slice(from, to);
 				newURL = base + id_video;				
