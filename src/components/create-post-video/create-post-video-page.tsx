@@ -29,10 +29,10 @@ function CreatePostVideoPage(props: any) {
     			</Card.Text>
 				<Form onSubmit={(e:any)=> { handleSubmit(addTodo,e)}}>
 					<Form.Group controlId="frmUrl">												
-						<Form.Control type="url" name="url" onChange={handleChange} placeholder="Enter url" />
+						<Form.Control type="url" name="url" onChange={handleChange} required placeholder="Enter url" />
 					</Form.Group>
 					<Form.Group controlId="frmTitle">																	
-						<Form.Control type="text" name="title" onChange={handleChange} placeholder="Enter Post title" />
+						<Form.Control type="text" name="title" onChange={handleChange} required placeholder="Enter Post title" />
 					</Form.Group>
 					<Form.Group controlId="frmDescription">												
 						<Form.Control type="text" name="description" onChange={handleChange} placeholder="Enter Post description" />

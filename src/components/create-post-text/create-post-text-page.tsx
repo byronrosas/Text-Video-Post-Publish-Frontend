@@ -25,7 +25,7 @@ function PostItemPage(props: any) {
 				<Card.Subtitle className="mb-2 text-muted">Create and Publish</Card.Subtitle>				
 				<Form onSubmit={(e:any)=>{handleSubmit(addTodo,e)}}>					
 					<Form.Group controlId="frmTitle">
-						<Form.Control type="text" name="title" onChange={handleChange} placeholder="Enter Post title" />
+						<Form.Control type="text" name="title" onChange={handleChange} required placeholder="Enter Post title" />
 					</Form.Group>
 					<Form.Group controlId="frmDescription">
 						<Form.Control type="text" name="description" onChange={handleChange} placeholder="Enter Post description" />
